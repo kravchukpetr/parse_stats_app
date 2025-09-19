@@ -156,6 +156,7 @@ def load_fixtures(params_fixture, is_debug=False):
         cur.close()
         conn.close()
     else:
+        print(f"No fixtures found in the provided file. League ID = {params_fixture['league']}, Season = {params_fixture['season']}")
         raise ValueError(f"No fixtures found in the provided file. League ID = {params_fixture['league']}, Season = {params_fixture['season']}")
     
 
@@ -205,6 +206,7 @@ def load_teams_to_db(params_team, is_debug=False):
         cur.close()
         conn.close()
     else:
+        print(f"No teams found in the provided file. League ID = {params_team['league']}, Season = {params_team['season']}")
         raise ValueError(f"No teams found in the provided file.  League ID = {params_team['league']}, Season = {params_team['season']}")    
 
 def load_teams(params_team, is_debug=False):
