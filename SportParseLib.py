@@ -12,8 +12,11 @@ url_leagues = f"{BASE_URL}/leagues"
 url_fixtures = f"{BASE_URL}/fixtures"
 url_teams = f"{BASE_URL}/teams"
 
+from dotenv import load_dotenv
+load_dotenv()
+
 headers = {
-  'x-rapidapi-key': '316dede52d52efb30d6dcc7cfb2e936b',
+  'x-rapidapi-key': os.environ['API_TOKEN'],
   'x-rapidapi-host': 'v3.football.api-sports.io'
 }
 
